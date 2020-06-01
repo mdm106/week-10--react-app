@@ -18,7 +18,7 @@ class SignUp extends Component {
         let passed = input === confirm && input.length > minimumLength;
 
         return (
-            <form class="form-group">
+            <form className="form-group">
                 <Password 
                     label="Password"
                     value={ input }

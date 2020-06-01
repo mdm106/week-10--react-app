@@ -18,7 +18,6 @@ class SignUp extends Component {
         let passed = input === confirm && input.length > minimumLength;
 
         return (
-            <>  
             <form class="form-group">
                 <Password 
                     label="Password"
@@ -31,7 +30,6 @@ class SignUp extends Component {
                     passed={ passed }
                     handleChange={ (e) => this.setState({ confirm: e.currentTarget.value })} />
             </form>
-            </>
         );
     }
 }

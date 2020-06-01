@@ -25,7 +25,7 @@ class Form extends Component {
     handleSubmit(e) {
         e.preventDefault();
         let { handleSubmit } = this.props;
-        handleSubmit(this.state);
+        handleSubmit({...this.state});
         this.setState({ name: "", email: ""});
     }
 

@@ -7,7 +7,7 @@ const Password = ({ label, value, passed, handleChange }) => (
             value={ value }
             onChange={ handleChange }
             type={"password"}
-            className={ passed ? "form-control is-valid" : "form-control is-invalid"}
+            className={"form-control " + (passed ? "is-valid" : "is-invalid")}
             />
         </label>
 );

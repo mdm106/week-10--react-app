@@ -8,10 +8,14 @@ axios.get("/articles").then(({ data }) => {
 });
 
 //Challenge 2
-axios.post("/articles", {
-    title: "Tuesday afternoon",
-    content: "It was very hot",
-    tags: ["hot", "sunny"],
-}).then(({ data }) => {
-    console.log(data.data.id);
+// axios.post("/articles", {
+//     title: "Tuesday afternoon",
+//     content: "It was very hot",
+//     tags: ["hot", "sunny"],
+// }).then(({ data }) => {
+//     console.log(data.data.id);
+// })
+
+axios.get("/articles/84").then(({ data }) => {
+    console.log(data.data);
 })

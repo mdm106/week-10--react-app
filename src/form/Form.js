@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import Label from './Label';
+
 class Form extends Component {
     constructor(props) {
         super(props);
@@ -35,14 +37,14 @@ class Form extends Component {
         return (
             <form>
                 <div className="form-group">
-                    <label htmlFor="name">Name</label>
+                    <Label label="name" />
                     <input className="form-control"
                            id="name"
                            name="name"
                            type="text"
                            value={ name }
                            onChange={(e) => this.handleName(e)} />
-                    <label htmlFor="email">Email</label>
+                    <Label label="email" />
                     <input className="form-control"
                            id="email"
                            name="email"

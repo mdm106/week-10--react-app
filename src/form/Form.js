@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
 import Label from './Label';
+import Input from './Input';
+import Button from './Button';
 
 class Form extends Component {
     constructor(props) {
@@ -38,21 +40,17 @@ class Form extends Component {
             <form>
                 <div className="form-group">
                     <Label label="name" />
-                    <input className="form-control"
-                           id="name"
-                           name="name"
+                    <Input field="name"
                            type="text"
-                           value={ name }
-                           onChange={(e) => this.handleName(e)} />
+                           input={ name }
+                           handleChange={(e) => this.handleName(e)} />
                     <Label label="email" />
-                    <input className="form-control"
-                           id="email"
-                           name="email"
-                           type="text"
-                           value={ email }
-                           onChange={(e) => this.handleEmail(e)} />
+                    <Input field="email"
+                           type="email"
+                           input={ email }
+                           handleChange={(e) => this.handleEmail(e)} />
                 </div>
-                <button className="btn btn-primary" type="submit" onClick={(e) => this.handleSubmit(e)}>Submit</button>
+                <Button handleSubmit={(e) => this.handleSubmit(e)}>Submit</Button>
             </form>
         )
     }

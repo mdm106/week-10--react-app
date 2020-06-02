@@ -32,9 +32,15 @@ axios.get("/articles").then(({ data }) => {
 // axios.delete("/articles/82").then(console.log("Deleted"));
 
 // Challenge 6
-axios.post("/articles/87/comments", {
-    email: "me@me.com",
-    comment: "cool blog :)",
-}).then(({ data }) => {
-    console.log(data.data.id);
+// axios.post("/articles/87/comments", {
+//     email: "me@me.com",
+//     comment: "cool blog :)",
+// }).then(({ data }) => {
+//     console.log(data.data.id);
+// })
+
+//Challenge 7
+axios.get("/articles/7/comments").then(({ data }) => {
+    console.log(data);
 })
+

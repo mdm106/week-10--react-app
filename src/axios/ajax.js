@@ -17,16 +17,24 @@ axios.get("/articles").then(({ data }) => {
 // })
 
 //Challenge 3
-axios.get("/articles/84").then(({ data }) => {
-    console.log(data.data);
-})
+// axios.get("/articles/84").then(({ data }) => {
+//     console.log(data.data);
+// })
 
 //Challenge 4
-axios.patch("/articles/87", {
-    tags: ["hot", "sunny", "day"],
-}).then(({ data }) => {
-    console.log(data.data.tags);
-})
+// axios.patch("/articles/87", {
+//     tags: ["hot", "sunny", "day"],
+// }).then(({ data }) => {
+//     console.log(data.data.tags);
+// })
 
-//Challenge 5
-axios.delete("/articles/82").then(console.log("Deleted"));
+// //Challenge 5
+// axios.delete("/articles/82").then(console.log("Deleted"));
+
+// Challenge 6
+axios.post("/articles/87/comments", {
+    email: "me@me.com",
+    comment: "cool blog :)",
+}).then(({ data }) => {
+    console.log(data.data.id);
+})

@@ -27,18 +27,15 @@ class Article extends Component {
       let { article, loaded } = this.state;
   
       return !loaded ? <p>Loading...</p> : (
-        <div class="container">
+        <div className="container">
           <h1 className="display-3">Great Blog</h1>
-          <ul className="list-group">
-              <li key={ article.id } className="list-group-item">
-                  { article.title }
-                    {article.tags.map(tag => (
-                        <span className="float-right badge badge-primary badge-pill" key={tag.id}>
-                            {tag}
-                        </span>
-                    ))}
-              </li>
-          </ul>
+          <h3>{ article.title }</h3>
+          <p>{article.content}</p>
+            {article.tags.map((tag, index) => (
+                <span className="float-right badge badge-primary badge-pill" key={index}>
+                    {tag}
+                </span>
+            ))}
         </div>
       );
     }

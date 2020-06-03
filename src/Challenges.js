@@ -9,6 +9,7 @@ import Max from './max/Max';
 import Form from './form/Form';
 import FormTwo from './form/FormTwo';
 import Clicked from './hooks/Clicked';
+import Square from './hooks/Square';
 
 const Challenges = () => {
   return (
@@ -20,6 +21,7 @@ const Challenges = () => {
         <Form handleSubmit={ console.log } />
         <FormTwo handleSubmit={ console.log } />
         <Clicked />
+        <Square />
     </>
   );
 }

@@ -11,6 +11,7 @@ import FormTwo from './form/FormTwo';
 import Clicked from './hooks/Clicked';
 import Square from './hooks/Square';
 import ToggleText from './hooks/ToggleText';
+import Counter from './hooks/Counter';
 
 const Challenges = () => {
   return (
@@ -24,6 +25,7 @@ const Challenges = () => {
         <Clicked />
         <Square />
         <ToggleText />
+        <Counter />
     </>
   );
 }

@@ -27,7 +27,7 @@ class Articles extends Component {
       let { articles, loaded } = this.state;
   
       return !loaded ? <p>Loading...</p> : (
-        <>
+        <div class="container">
           <h1 className="display-3">Articles</h1>
           <ul className="list-group">
             { articles.map(article => (
@@ -41,7 +41,7 @@ class Articles extends Component {
               </li>
             )) }
           </ul>
-        </>
+        </div>
       );
     }
   }

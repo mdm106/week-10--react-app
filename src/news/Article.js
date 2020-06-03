@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from '../axios/axios';
 
+import Comments from './Comments';
+
 class Article extends Component {
     constructor(props) {
       super(props);
@@ -27,6 +29,7 @@ class Article extends Component {
       let { article, loaded } = this.state;
   
       return !loaded ? <p>Loading...</p> : (
+        <>
         <div className="container">
           <h1 className="display-3">Great Blog</h1>
           <h3>{ article.title }</h3>
@@ -37,6 +40,8 @@ class Article extends Component {
                 </span>
             ))}
         </div>
+        <Comments articleID={article.id} />
+        </>
       );
     }
   }

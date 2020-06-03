@@ -10,6 +10,7 @@ import Form from './form/Form';
 import FormTwo from './form/FormTwo';
 import Clicked from './hooks/Clicked';
 import Square from './hooks/Square';
+import ToggleText from './hooks/ToggleText';
 
 const Challenges = () => {
   return (
@@ -22,6 +23,7 @@ const Challenges = () => {
         <FormTwo handleSubmit={ console.log } />
         <Clicked />
         <Square />
+        <ToggleText />
     </>
   );
 }

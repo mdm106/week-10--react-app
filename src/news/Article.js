@@ -1,52 +1,47 @@
 import React, { Component } from "react";
 import axios from '../axios/axios';
-import { Link } from "react-router-dom";
 
-class Articles extends Component {
+class Article extends Component {
     constructor(props) {
       super(props);
   
       this.state = {
         loaded: false,
-        articles: [],
+        article: [],
       };
     }
   
     // runs when the component first renders
     componentDidMount() {
       // make the GET request
-      axios.get("/articles").then(({ data }) => {
-        // once the data has come back update the component state
+      let id = this.props.match.params.id;
+      axios.get(`/articles/${id}`).then(({ data }) => {
         this.setState({
           loaded: true,
-          articles: data.data,
+          article: data.data,
         });
       });
     }
   
     render() {
-      let { articles, loaded } = this.state;
+      let { article, loaded } = this.state;
   
       return !loaded ? <p>Loading...</p> : (
-        <div className="container">
+        <div class="container">
           <h1 className="display-3">Great Blog</h1>
           <ul className="list-group">
-            { articles.map(article => (
               <li key={ article.id } className="list-group-item">
-                  <Link to={`/news/${article.id}`}>
                   { article.title }
-                  </Link>
-                    {article.tags.map((tag, index) => (
-                        <span className="float-right badge badge-primary badge-pill" key={index}>
+                    {article.tags.map(tag => (
+                        <span className="float-right badge badge-primary badge-pill" key={tag.id}>
                             {tag}
                         </span>
                     ))}
               </li>
-            )) }
           </ul>
         </div>
       );
     }
   }
   
-  export default Articles;
+  export default Article;

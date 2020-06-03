@@ -8,6 +8,7 @@ import './App.css';
 
 import Challenges from './Challenges';
 import Articles from './news/Articles';
+import Article from './news/Article';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <>
         <Route exact path="/" component={ Challenges } />
         <Route exact path="/news" component={ Articles } />
+        <Route exact path="/news/:id" component={ Article } />
       </>
     </Router>
   );

@@ -12,6 +12,7 @@ import Clicked from './hooks/Clicked';
 import Square from './hooks/Square';
 import ToggleText from './hooks/ToggleText';
 import Counter from './hooks/Counter';
+import StepCounter from './hooks/StepCounter';
 
 const Challenges = () => {
   return (
@@ -26,6 +27,7 @@ const Challenges = () => {
         <Square />
         <ToggleText />
         <Counter />
+        <StepCounter />
     </>
   );
 }

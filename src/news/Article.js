@@ -16,7 +16,7 @@ class Article extends Component {
     // runs when the component first renders
     componentDidMount() {
       // make the GET request
-      let id = this.props.match.params.id;
+      let id = this.props.articleID;
       axios.get(`/articles/${id}`).then(({ data }) => {
         this.setState({
           loaded: true,

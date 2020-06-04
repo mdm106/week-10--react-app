@@ -19,6 +19,7 @@ import PasswordStrength from './hooks/PasswordStrength';
 import TempConverter from './hooks/TempConverter';
 import List from './hooks/List';
 import ClickedR from './reducers/ClickedR';
+import StepCounterR from './reducers/StepCounterR';
 
 const Challenges = () => {
   return (
@@ -40,6 +41,7 @@ const Challenges = () => {
         <TempConverter />
         <List />
         <ClickedR />
+        <StepCounterR />
     </>
   );
 }

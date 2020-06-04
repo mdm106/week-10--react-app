@@ -18,6 +18,7 @@ import RollCall from './hooks/RollCall';
 import PasswordStrength from './hooks/PasswordStrength';
 import TempConverter from './hooks/TempConverter';
 import List from './hooks/List';
+import ClickedR from './reducers/ClickedR';
 
 const Challenges = () => {
   return (
@@ -38,6 +39,7 @@ const Challenges = () => {
         <PasswordStrength />
         <TempConverter />
         <List />
+        <ClickedR />
     </>
   );
 }

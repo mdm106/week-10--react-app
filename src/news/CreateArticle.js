@@ -12,22 +12,35 @@ class CreateArticle extends Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleChange = this.handleChange.bind(this);
+        this.handleTitle = this.handleTitle.bind(this);
+        this.handleArticle = this.handleArticle.bind(this);
+        this.handleTags = this.handleTags.bind(this);
     }
 
-    handleChange(e, field) {
-        let stateObject = {};
-        stateObject[field] = e.currentTarget.value;
-        this.setState(stateObject);
+    handleTitle(e) {
+        this.setState({
+            title: e.currentTarget.value
+        })
+    }
+
+    handleArticle(e) {
+        this.setState({
+            article: e.currentTarget.value
+        })
+    }
+
+    handleTags(e) {
+        this.setState({
+            tags: e.currentTarget.value
+        })
     }
 
     handleSubmit(e) {
-        e.preventDefault();
-        // get the values of some controlled components
+        e.preventDefault(); //keeps page from refreshing when it is submitted
         let { title, article, tags } = this.state;
-
-        let formattedTags = tags.trim().split(", ");
-
+        //RegEx to split words with any comma and space
+        let formattedTags = tags.split(/\s*,\s*/);
+        console.log(formattedTags);
         axios.post("/articles", { 
             title: title,
             content: article,
@@ -54,7 +67,7 @@ class CreateArticle extends Component {
                             name="title"
                             type="text"
                             value={ title }
-                            onChange={ e => this.handleChange(e, "title") }
+                            onChange={ this.handleTitle } //slight performance issues with anonymous function inline, potentially better to split out // when the annoymous function is called
                         />
                         <label htmlFor="title">Article</label>
                         <input className="form-control"
@@ -62,7 +75,7 @@ class CreateArticle extends Component {
                             name="article"
                             type="text"
                             value={ article }
-                            onChange={ e => this.handleChange(e, "article") }
+                            onChange={ this.handleArticle }
                         />
                         <label htmlFor="title">Tags</label>
                         <input className="form-control"
@@ -70,7 +83,7 @@ class CreateArticle extends Component {
                             name="tags"
                             type="text"
                             value={ tags }
-                            onChange={ e => this.handleChange(e, "tags") }
+                            onChange={ this.handleTags }
                         />
                         </div>
                         <button className="btn btn-primary"type="submit">Create</button>

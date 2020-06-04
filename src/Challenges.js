@@ -16,6 +16,7 @@ import StepCounter from './hooks/StepCounter';
 import CatchMeIfYouCan from './hooks/CatchMeifYouCan';
 import RollCall from './hooks/RollCall';
 import PasswordStrength from './hooks/PasswordStrength';
+import TempConverter from './hooks/TempConverter';
 
 const Challenges = () => {
   return (
@@ -34,6 +35,7 @@ const Challenges = () => {
         <CatchMeIfYouCan />
         <RollCall />
         <PasswordStrength />
+        <TempConverter />
     </>
   );
 }

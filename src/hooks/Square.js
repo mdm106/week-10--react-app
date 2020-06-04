@@ -5,7 +5,12 @@ const Square = ({ colour }) => {
 
     const updateToggle = () => setToggle(!toggle);
 
-    return <div className="mb-4" onClick={ updateToggle } style={{ width: 200, height: 200, backgroundColor: toggle ? "green" : colour}}></div>;
+    return <div className="mb-4"
+                onClick={ updateToggle }
+                style={{ width: 200,
+                         height: 200,
+                         backgroundColor: toggle ? "green" : colour}}>
+           </div>;
 
 }
 

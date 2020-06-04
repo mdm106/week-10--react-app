@@ -14,6 +14,7 @@ import ToggleText from './hooks/ToggleText';
 import Counter from './hooks/Counter';
 import StepCounter from './hooks/StepCounter';
 import CatchMeIfYouCan from './hooks/CatchMeifYouCan';
+import RollCall from './hooks/RollCall';
 
 const Challenges = () => {
   return (
@@ -30,6 +31,7 @@ const Challenges = () => {
         <Counter />
         <StepCounter />
         <CatchMeIfYouCan />
+        <RollCall />
     </>
   );
 }

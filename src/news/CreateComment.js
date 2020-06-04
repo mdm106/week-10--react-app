@@ -11,13 +11,20 @@ class CreateComment extends Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleChange = this.handleChange.bind(this);
+        this.handleEmail= this.handleEmail.bind(this);
+        this.handleComment= this.handleComment.bind(this);
     }
 
-    handleChange(e, field) {
-        let stateObject = {};
-        stateObject[field] = e.currentTarget.value;
-        this.setState(stateObject);
+    handleEmail(e) {
+        this.setState({
+            email: e.currentTarget.value
+        })
+    }
+
+    handleComment(e) {
+        this.setState({
+            comment: e.currentTarget.value
+        })
     }
 
     handleSubmit(e) {
@@ -49,7 +56,7 @@ class CreateComment extends Component {
                             name="email"
                             type="text"
                             value={ email }
-                            onChange={ e => this.handleChange(e, "email") }
+                            onChange={ this.handleEmail }
                         />
                         <label htmlFor="comment">Comment</label>
                         <input className="form-control"
@@ -57,7 +64,7 @@ class CreateComment extends Component {
                             name="comment"
                             type="text"
                             value={ comment }
-                            onChange={ e => this.handleChange(e, "comment") }
+                            onChange={ this.handleComment }
                         />
                         </div>
                         <button className="btn btn-primary"type="submit">Add Comment</button>

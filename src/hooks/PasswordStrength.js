@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-const setColour = (length) => {
+const setColour = (length) => { //pure function as just takes a value and returns a value so can be declared anywhere and only is rendered once when the app comes up
     if (length === 0) {
-        return "none"
+        return ""
     }
 
     if(length < 9) {

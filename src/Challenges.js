@@ -13,6 +13,7 @@ import Square from './hooks/Square';
 import ToggleText from './hooks/ToggleText';
 import Counter from './hooks/Counter';
 import StepCounter from './hooks/StepCounter';
+import CatchMeIfYouCan from './hooks/CatchMeifYouCan';
 
 const Challenges = () => {
   return (
@@ -28,6 +29,7 @@ const Challenges = () => {
         <ToggleText />
         <Counter />
         <StepCounter />
+        <CatchMeIfYouCan />
     </>
   );
 }

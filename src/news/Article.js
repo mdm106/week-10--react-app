@@ -10,7 +10,7 @@ class Article extends Component {
   
       this.state = {
         loaded: false,
-        article: [],
+        article: {}, //empty object because article is an object
       };
     }
   

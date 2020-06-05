@@ -46,18 +46,20 @@ const TempConverterR = () => {
 
     return (
         <form className="form-group">
-            <label>Fahrenheit:</label>
-            <input
-            value={ fahrenheit }
-            onChange={ (e) => dispatch({ type: "FAHRENHEIT_CHANGE", value: e.target.value}) }
-            type={"number"}
-            />
-            <label>Celsius:</label>
-            <input
-            value={ celsius }
-            onChange={ (e) => dispatch({ type: "CELSIUS_CHANGE", value: e.target.value}) }
-            type={"number"}
-            />
+            <label>Fahrenheit:
+                <input
+                value={ fahrenheit }
+                onChange={ (e) => dispatch({ type: "FAHRENHEIT_CHANGE", value: e.target.value}) }
+                type={"number"}
+                />
+            </label>
+            <label>Celsius:
+                <input
+                value={ celsius }
+                onChange={ (e) => dispatch({ type: "CELSIUS_CHANGE", value: e.target.value}) }
+                type={"number"}
+                />
+            </label>
         </form>
     )
 

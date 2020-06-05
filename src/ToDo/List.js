@@ -24,11 +24,32 @@ const List = () => {
     setInput(e.currentTarget.value);
   };
 
+  //handleSubmit will edit if clicked = true i.e. if a 
   const handleSubmit = (e) => {
       e.preventDefault();
-      setInput("");
-      dispatch({type: "NEW_ITEM", value: input})
+      if(clicked) {
+          setInput("");
+          setClicked(false);
+          dispatch({type: "CHANGE_ITEM", index: clickedIndex, value: input});
+      } else {
+        setInput("");
+        dispatch({type: "NEW_ITEM", value: input})
+      }
+      
   }
+
+  const handleEdit = (e, index) => {
+      e.preventDefault();
+      updateClicked();
+      updateIndex(index);
+  }
+  //to set state as being a clicked edit button and the index of that button
+  const [clicked, setClicked] = useState(false);
+  const [clickedIndex, setIndex] = useState("");
+
+  const updateClicked = () => setClicked(!clicked);
+  const updateIndex = (i) => setIndex(i);
+
 
   return (
     <div className="card">
@@ -55,13 +76,14 @@ const List = () => {
                   className="flex-grow-1"
                   style={ {
                     cursor: "pointer",
-                    textDecoration: item.completed ? "line-through" : ""
+                    textDecoration: item.completed ? "line-through" : "",
+                    border: clicked && clickedIndex === index ? "2px solid red" : "",
                   } }
                   onClick={ () => dispatch({type: "MARK_COMPLETED", index: index})}
                 >{ item.task }</span>
 
                 { /* edit button */ }
-                <button class="btn btn-sm btn-primary mr-1">Edit</button>
+                <button class="btn btn-sm btn-primary mr-1" onClick={ (e) => handleEdit(e, index) }>Edit</button>
 
                 { /* remove button */ }
                 <button class="btn btn-sm btn-danger" onClick={ () => dispatch({ type: "REMOVE_ITEM", index: index }) }>&times;</button>

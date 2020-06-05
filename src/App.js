@@ -11,6 +11,7 @@ import Challenges from './Challenges';
 import Articles from './news/Articles';
 import Article from './news/Article';
 import CreateArticle from './news/CreateArticle';
+import List from './ToDo/List';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/news/:id" render={ ({ match }) => ( 
           <Article articleID={ match.params.id } />
         ) } />
+        <Route exact path="/list" component={ List } />
       </Switch>
     </Router>
   );

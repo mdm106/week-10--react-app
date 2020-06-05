@@ -14,10 +14,10 @@ export const removeItem = (state, { index }) => {
     }
 };
 
-export const updateItem = (state, item) => {
+export const updateItem = (state, {index, value}) => {
     return {
         ...state,
-        items: state.items.map((val, i) => i===item.index ? {...val, task: item.value} : val),
+        items: state.items.map((val, i) => i===index ? {...val, task: value} : val),
     }
 };
 

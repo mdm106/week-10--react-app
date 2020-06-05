@@ -20,6 +20,7 @@ import TempConverter from './hooks/TempConverter';
 import List from './hooks/List';
 import ClickedR from './reducers/ClickedR';
 import StepCounterR from './reducers/StepCounterR';
+import TempConverterR from './reducers/TempConverterR';
 
 const Challenges = () => {
   return (
@@ -42,6 +43,7 @@ const Challenges = () => {
         <List />
         <ClickedR />
         <StepCounterR />
+        <TempConverterR />
     </>
   );
 }

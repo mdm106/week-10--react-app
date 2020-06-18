@@ -29,7 +29,7 @@ class Articles extends Component {
   
       return !loaded ? <p>Loading...</p> : (
         <div className="container">
-          <h1 className="display-3">Great Blog</h1>
+          <h1 className="display-3">Fantastic Blog</h1>
           <ul className="list-group">
             { articles.map(article => (
               <li key={ article.id } className="list-group-item">

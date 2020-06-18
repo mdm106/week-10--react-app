@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/week-10--react-app/static/css/main.5f361e03.chunk.css",
-    "main.js": "/week-10--react-app/static/js/main.42b1078e.chunk.js",
-    "main.js.map": "/week-10--react-app/static/js/main.42b1078e.chunk.js.map",
+    "main.js": "/week-10--react-app/static/js/main.74f012a4.chunk.js",
+    "main.js.map": "/week-10--react-app/static/js/main.74f012a4.chunk.js.map",
     "runtime-main.js": "/week-10--react-app/static/js/runtime-main.bead9fe3.js",
     "runtime-main.js.map": "/week-10--react-app/static/js/runtime-main.bead9fe3.js.map",
     "static/js/2.1e9e414f.chunk.js": "/week-10--react-app/static/js/2.1e9e414f.chunk.js",
     "static/js/2.1e9e414f.chunk.js.map": "/week-10--react-app/static/js/2.1e9e414f.chunk.js.map",
     "index.html": "/week-10--react-app/index.html",
-    "precache-manifest.85b4d1aa1e1c48e05df8c9903d4bb0c2.js": "/week-10--react-app/precache-manifest.85b4d1aa1e1c48e05df8c9903d4bb0c2.js",
+    "precache-manifest.1de9b6c0433e947f24cdee4410f81a1f.js": "/week-10--react-app/precache-manifest.1de9b6c0433e947f24cdee4410f81a1f.js",
     "service-worker.js": "/week-10--react-app/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/week-10--react-app/static/css/main.5f361e03.chunk.css.map",
     "static/js/2.1e9e414f.chunk.js.LICENSE.txt": "/week-10--react-app/static/js/2.1e9e414f.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.bead9fe3.js",
     "static/js/2.1e9e414f.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.42b1078e.chunk.js"
+    "static/js/main.74f012a4.chunk.js"
   ]
 }
